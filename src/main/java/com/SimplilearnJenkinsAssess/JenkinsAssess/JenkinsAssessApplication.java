@@ -15,8 +15,6 @@ public class JenkinsAssessApplication {
 	}
 	@GetMapping("/")
 	public String hello(@RequestParam(value = "name", defaultValue = "Aetna healthcare ") String name) {
-		return String.format("<h1>Welcome to  %s!</h1>
-		<h2>An US based company</h2>
-		<h2>Subscribe to receive issue release notifications</h2>", name);
+		return String.format("<h1>Welcome to  %s!</h1><h2>An US based company</h2><h2>Subscribe to receive issue release notifications</h2>", name);
 	}
 }
