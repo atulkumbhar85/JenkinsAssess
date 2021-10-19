@@ -1,13 +1,4 @@
-FROM maven:3-alpine
+From tomcat:8-jre8 
 
-COPY pom.xml pipeline/
-
-COPY src/ pipeline/src/
-
-WORKDIR pipeline/
-
-RUN mvn clean install
-
-EXPOSE 8090
-
-ENTRYPOINT [ "java", "-jar", "/pipeline/target/jenkins-pipeline.jar"]
+# copy war file on to container 
+COPY ./webapp.war /usr/local/tomcat/webapps
