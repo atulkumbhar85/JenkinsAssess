@@ -4,7 +4,12 @@ def DOCKER_HUB_USER="atulkumbhar85"
 def HTTP_PORT="8080"
 
 node('agent01'){
-    try{        
+    try{
+        stage('checkout'){
+
+            git url: 'https://github.com/atulkumbhar85/JenkinsAssess.git'
+
+        }
         stage('compile'){
             
             sh 'mvn compile'
