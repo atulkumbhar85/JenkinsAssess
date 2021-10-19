@@ -14,7 +14,7 @@ public class JenkinsAssessApplication {
 		SpringApplication.run(JenkinsAssessApplication.class, args);
 	}
 	@GetMapping("/")
-	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return String.format("<h1>Hello %s!</h1> <h2>This is sample header</h2>", name);
+	public String hello(@RequestParam(value = "name", defaultValue = "Aetna healthcare ") String name) {
+		return String.format("<h1>Welcome to  %s!</h1> <h2>An US based company</h2>", name);
 	}
 }
